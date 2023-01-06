@@ -5,9 +5,7 @@ import (
 	"time"
 )
 
-const (
-	repeat = 10_000_000_000
-)
+const repeat = 10_000_000_000
 
 func main() {
 	start := time.Now()
@@ -18,5 +16,5 @@ func main() {
 	elapsed := time.Since(start)
 	log.Printf("sum is %v", sum)
 	ops := int64(repeat / elapsed.Seconds())
-	log.Printf("%v operation per second", ops)
+	log.Printf("%v operations per second", ops)
 }

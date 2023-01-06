@@ -12,12 +12,12 @@ const (
 )
 
 func main() {
-	var (
-		sum int64
-		mu  sync.Mutex
-	)
 	start := time.Now()
-	var wg sync.WaitGroup
+	var (
+		mu  sync.Mutex
+		sum int64
+		wg  sync.WaitGroup
+	)
 	for c := 0; c < concurrency; c++ {
 		wg.Add(1)
 		go func() {
@@ -33,5 +33,5 @@ func main() {
 	elapsed := time.Since(start)
 	log.Printf("sum is %v", sum)
 	ops := int64(concurrency * repeat / elapsed.Seconds())
-	log.Printf("%v operation per second", ops)
+	log.Printf("%v operations per second", ops)
 }

@@ -1,15 +1,8 @@
 test:
-	go test -v -cover -coverprofile=cover.out ./...
-
-cover:
-	go tool cover -html=cover.out
+	go test -v --count=1 ./...
 
 lint:
-	golangci-config-generator
 	golangci-lint run
 
-install-gcg:
-	go install github.com/rbee3u/golangci-config-generator/cmd/golangci-config-generator@latest
-
 install-lint:
-	go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.43.0
+	go install github.com/golangci/golangci-lint/cmd/golangci-lint@v1.50.1

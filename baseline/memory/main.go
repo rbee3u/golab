@@ -25,5 +25,5 @@ func main() {
 	elapsed := time.Since(start)
 	log.Printf("sum is %v", sum)
 	ops := int64(repeat * length / elapsed.Seconds())
-	log.Printf("%v operation per second", ops)
+	log.Printf("%v operations per second", ops)
 }

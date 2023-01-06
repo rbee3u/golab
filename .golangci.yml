@@ -1,20 +1,26 @@
 linters:
   disable-all: true
   enable:
+    - asasalint
     - asciicheck
     - bidichk
     - bodyclose
+    - containedctx
     - contextcheck
     - cyclop
-    - deadcode
+    - decorder
     - depguard
     - dogsled
     - dupl
+    - dupword
     - durationcheck
     - errcheck
+    - errchkjson
     - errname
     - errorlint
+    - execinquery
     - exhaustive
+    - exhaustruct
     - exportloopref
     - forbidigo
     - forcetypeassert
@@ -33,37 +39,45 @@ linters:
     - gofumpt
     - goheader
     - goimports
+    - gomnd
     - gomoddirectives
     - gomodguard
     - goprintffuncname
     - gosec
     - gosimple
     - govet
-    - ifshort
+    - grouper
     - importas
     - ineffassign
+    - interfacebloat
     - ireturn
     - lll
+    - loggercheck
+    - maintidx
     - makezero
     - misspell
     - nakedret
     - nestif
     - nilerr
     - nilnil
+    - nlreturn
     - noctx
     - nolintlint
+    - nonamedreturns
+    - nosprintfhostport
     - paralleltest
     - prealloc
     - predeclared
     - promlinter
+    - reassign
     - revive
     - rowserrcheck
     - sqlclosecheck
     - staticcheck
-    - structcheck
     - stylecheck
     - tagliatelle
     - tenv
+    - testableexamples
     - testpackage
     - thelper
     - tparallel
@@ -71,7 +85,21 @@ linters:
     - unconvert
     - unparam
     - unused
-    - varcheck
+    - usestdlibvars
+    - varnamelen
     - wastedassign
     - whitespace
     - wrapcheck
+    - wsl
+
+run:
+  tests: false
+
+issues:
+  exclude-rules:
+    - path: \.go
+      linters:
+        - exhaustruct
+        - gomnd
+        - varnamelen
+        - wsl

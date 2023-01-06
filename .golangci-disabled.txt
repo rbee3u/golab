@@ -1,9 +1,0 @@
-exhaustivestruct
-golint
-gomnd
-interfacer
-maligned
-nlreturn
-scopelint
-varnamelen
-wsl

@@ -31,5 +31,5 @@ func main() {
 	elapsed := time.Since(start)
 	log.Printf("sum is %v", atomic.LoadInt64(&sum))
 	ops := int64(concurrency * repeat / elapsed.Seconds())
-	log.Printf("%v operation per second", ops)
+	log.Printf("%v operations per second", ops)
 }

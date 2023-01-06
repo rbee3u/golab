@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	repeat = 1_000
+	repeat = 3_000
 	length = 1_000_000
 )
 
